@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    width: 416px;
+    width: 416px; /*width set to 416 to accomodate 4px from border*/
     flex-wrap: wrap;
 }
 
@@ -10,4 +10,9 @@
     height: 100px;
     margin: 0;
     padding: 0;
+    background-color: blue;
+}
+
+.colorful {
+    background-color: yellow;
 }

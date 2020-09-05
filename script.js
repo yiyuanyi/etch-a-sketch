@@ -9,3 +9,12 @@ for (let i = 0; i < 16; i++) {
 };
 
 window.addEventListener('onclick', createGrid());
+
+let square = document.querySelector('.square');
+
+function colorChange() {
+    square.setAttribute("class","colorful");
+};
+
+square.addEventListener('mouseover', colorChange());
+
