@@ -1,6 +1,13 @@
+.container {
+    display: flex;
+    width: 416px;
+    flex-wrap: wrap;
+}
+
 .square {
     border: 2px solid red;
-    width: 40px;
-    height: 40px;
-    margin: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
 }
