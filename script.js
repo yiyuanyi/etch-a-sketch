@@ -10,10 +10,13 @@ for (let i = 0; i < 16; i++) {
 
 window.addEventListener('onclick', createGrid());
 
-let square = document.getElementsByClassName('square');
+/*need to use getElement, think cause returns live list of 
+  HTML items instead of node list*/
 
-for (let i = 0; i < square.length; i++) {
-    square[i].addEventListener('mouseover', function() {
-        square[i].style.backgroundColor = "yellow";
+let gridItem = document.getElementsByClassName('square');
+
+for (let i = 0; i < gridItem.length; i++) {
+    gridItem[i].addEventListener('mouseover', function() {
+        gridItem[i].style.backgroundColor = "yellow";
     });
 };
