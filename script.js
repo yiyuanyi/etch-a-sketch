@@ -10,18 +10,10 @@ for (let i = 0; i < 16; i++) {
 
 window.addEventListener('onclick', createGrid());
 
-function colorChange() {
-    let square = document.querySelector('.square');
-    square.setAttribute('class','square colorful');
-    console.log("yellow");
+let square = document.getElementsByClassName('square');
+
+for (let i = 0; i < square.length; i++) {
+    square[i].addEventListener('mouseover', function() {
+        square[i].style.backgroundColor = "yellow";
+    });
 };
-
-function removeColor() {
-    let square = document.querySelector('.square');
-    square.setAttribute('class','square');
-};
-
-document.getElementsByClassName('square').addEventListener('mouseover', colorChange());
-
-document.getElementsByClassName('square').addEventListener('mouseout', removeColor());
-
