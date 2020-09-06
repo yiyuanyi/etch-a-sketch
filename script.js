@@ -17,6 +17,6 @@ let gridItem = document.getElementsByClassName('square');
 
 for (let i = 0; i < gridItem.length; i++) {
     gridItem[i].addEventListener('mouseover', function() {
-        gridItem[i].style.backgroundColor = "yellow";
+        gridItem[i].style.backgroundColor = "#8EF0D5";
     });
 };
