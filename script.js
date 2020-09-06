@@ -1,6 +1,10 @@
 const container = document.querySelector('.container');
 
 function createGrid(size) {
+    
+    container.style.setProperty("grid-template-columns", `repeat(${size}, 1fr)`);
+    container.style.setProperty("grid-template-rows", `repeat(${size}, 1fr)`);
+    
     for (let i = 0; i < (size ** 2); i++) {
         let square = document.createElement('div');
         container.appendChild(square);
@@ -36,6 +40,6 @@ function removeGrid() {
 
 refresh.addEventListener('click', function() {
     removeGrid();
-    newSize = prompt("how many squares wide?");
+    let newSize = prompt("how many squares wide?");
     createGrid(newSize);
 });
