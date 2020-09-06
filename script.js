@@ -1,7 +1,7 @@
 const container = document.querySelector('.container');
 
-function createGrid() {
-for (let i = 0; i < (16 ** 2); i++) {
+function createGrid(size) {
+    for (let i = 0; i < (size ** 2); i++) {
         let square = document.createElement('div');
         container.appendChild(square);
         square.setAttribute("class","square");
@@ -31,6 +31,5 @@ for (let i = 0; i < gridItem.length; i++) {
 
 refresh.addEventListener('click', function() {
     let newSize = prompt("how many squares wide?");
-    container.style.setProperty('grid-template-columns', `repeat(${newSize}, 1fr)`);
-    container.style.setProperty('grid-template-rows', `repeat(${newSize}, 1fr)`);
+    createGrid(newSize);
 });
