@@ -28,3 +28,7 @@ for (let i = 0; i < gridItem.length; i++) {
         gridItem[i].style.backgroundColor = "#FFF";
     });
 };
+
+refresh.addEventListener('click', function() {
+    let newSize = prompt("how many squares wide?");
+});
