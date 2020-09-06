@@ -20,3 +20,11 @@ for (let i = 0; i < gridItem.length; i++) {
         gridItem[i].style.backgroundColor = "#8EF0D5";
     });
 };
+
+let refresh = document.querySelector(".reset");
+
+for (let i = 0; i < gridItem.length; i++) {
+    refresh.addEventListener('click', function() {
+        gridItem[i].style.backgroundColor = "#FFF";
+    });
+};
