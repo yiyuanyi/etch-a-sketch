@@ -26,7 +26,16 @@ for (let i = 0; i < gridItem.length; i++) {
     });
 };
 
+function removeGrid() {
+    //use querySelectorAll to get static list
+    let currentGrid = document.querySelectorAll(".square");
+    for (let i = 0; i < currentGrid; i++) {
+        container.removeChild(currentGrid[i]);
+    };
+};
+
 refresh.addEventListener('click', function() {
-    let newSize = prompt("how many squares wide?");
+    removeGrid();
+    newSize = prompt("how many squares wide?");
     createGrid(newSize);
 });
