@@ -8,9 +8,11 @@ body {
 }
 
 .container {
-    display: flex;
+    display: grid;
     width: 416px;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0;
 }
 
 .center {
