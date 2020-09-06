@@ -31,4 +31,7 @@ for (let i = 0; i < gridItem.length; i++) {
 
 refresh.addEventListener('click', function() {
     let newSize = prompt("how many squares wide?");
+    let grid = document.querySelector('.container');
+    grid.style.setProperty('grid-template-columns', `repeat(${newSize}, 1fr)`);
+    grid.style.setProperty('grid-template-rows', `repeat(${newSize}, 1fr)`);
 });
