@@ -8,10 +8,7 @@ function createGrid(size) {
     };
 };
 
-window.addEventListener('onclick', createGrid());
-
-/*need to use getElement, think cause returns live list of 
-  HTML items instead of node list*/
+window.addEventListener('onload', createGrid(16));
 
 let gridItem = document.getElementsByClassName('square');
 
