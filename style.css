@@ -2,11 +2,19 @@ body {
     text-align: center;
 }
 
+.reset {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 .container {
     display: flex;
-    position: relative;
     width: 416px; /*width set to 416 to accomodate 4px from border*/
     flex-wrap: wrap;
+}
+
+.center {
+    margin: 0 auto;
 }
 
 .square {
