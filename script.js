@@ -1,45 +1,34 @@
 const container = document.querySelector('.container');
 
+let gridItem = document.getElementsByClassName('square');
+
+let refresh = document.querySelector(".reset");
+
 function createGrid(size) {
-    
-    container.style.setProperty("grid-template-columns", `repeat(${size}, 1fr)`);
-    container.style.setProperty("grid-template-rows", `repeat(${size}, 1fr)`);
-    
+    container.innerHTML = "";
     for (let i = 0; i < (size ** 2); i++) {
         let square = document.createElement('div');
         container.appendChild(square);
         square.setAttribute("class","square");
     };
+    container.style.setProperty("grid-template-columns", `repeat(${size}, 1fr)`);
+
+    for (let i = 0; i < gridItem.length; i++) {
+        gridItem[i].addEventListener('mouseover', function() {
+            gridItem[i].style.backgroundColor = "#8EF0D5";
+        });
+    };
+
+    for (let i = 0; i < gridItem.length; i++) {
+        refresh.addEventListener('click', function() {
+            gridItem[i].style.backgroundColor = "#FFF";
+        });
+    };
 };
 
 window.addEventListener('onload', createGrid(16));
 
-let gridItem = document.getElementsByClassName('square');
-
-for (let i = 0; i < gridItem.length; i++) {
-    gridItem[i].addEventListener('mouseover', function() {
-        gridItem[i].style.backgroundColor = "#8EF0D5";
-    });
-};
-
-let refresh = document.querySelector(".reset");
-
-for (let i = 0; i < gridItem.length; i++) {
-    refresh.addEventListener('click', function() {
-        gridItem[i].style.backgroundColor = "#FFF";
-    });
-};
-
-function removeGrid() {
-    //use querySelectorAll to get static list
-    let currentGrid = document.querySelectorAll(".square");
-    for (let i = 0; i < currentGrid; i++) {
-        container.removeChild(currentGrid[i]);
-    };
-};
-
 refresh.addEventListener('click', function() {
-    removeGrid();
     let newSize = prompt("how many squares wide?");
     createGrid(newSize);
 });
