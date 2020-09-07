@@ -1,15 +1,26 @@
 body {
     text-align: center;
-    background-color: #151145;
+    background-color: #211B6B;
 }
 
 #title {
     color: #FFF;
+    font-family: helvetica;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+button {
+    padding: 15px;
+    border-radius: 6px;
+    border-color: #FF9C50;
+    background-color: #FF9C50;
+    outline: none;
 }
 
 .reset {
     margin-top: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .container {

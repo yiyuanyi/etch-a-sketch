@@ -25,7 +25,7 @@ function createGrid(size) {
 
     for (let i = 0; i < gridItem.length; i++) {
         gridItem[i].addEventListener('mouseover', function() {
-            gridItem[i].style.backgroundColor = '#8EF0D5';
+            gridItem[i].style.backgroundColor = '#29a684';
         });
     };
 
